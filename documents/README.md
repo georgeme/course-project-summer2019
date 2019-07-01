@@ -15,5 +15,5 @@ I love movies and I've seen a ton of them. I think movies are a great way to esc
 ### API I plan to use
 http://www.omdbapi.com/
 
-###### NOTE
+#### NOTE
 I may make some adjustments to this plan as I learn more over this course, but this is generally the plan. The API may need to change as well.
