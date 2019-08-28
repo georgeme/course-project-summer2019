@@ -1,15 +1,15 @@
 <template>
  <article class="card">
-	 <img :src="country.flag" :alt="country.name" class="card__img">
-	 <h2 class="card__title">{{ country.name }}</h2>
-	 <p class="card__copy">{{ country.subregion }}</p>
+
+	 <h2 class="card__title">{{ movie.Title }}</h2>
+	 <p class="card__copy">{{ movie.Plot }}</p>
  </article>
 </template>
 
 <script>
 export default {
 	props: {
-		country: Object
+		movie: Object
 	}
 }
 </script>

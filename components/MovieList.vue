@@ -1,11 +1,11 @@
 <template>
   <div class="wrapper">
     <h1 class="heading">Countries of Europe</h1>
-    <section class="container" v-if="countries">
+    <section class="container" v-if="movies">
         <CardAPI
-          v-for="country of countries"
-          :key="country.id"
-          :country="country"
+          v-for="movie of movies"
+          :key="movie.id"
+          :movie="movie"
         />
     </section>
   </div>
@@ -22,14 +22,14 @@ export default {
   data() {
     return {
       loading: true,
-      countries: null,
+      movies: null,
       errored: false
     }
   },
   mounted () {
   axios
-    .get('https://restcountries.eu/rest/v2/region/americas')
-    .then(response => (this.countries = response.data))
+    .get('http://www.omdbapi.com/?i=tt3896198&apikey=bb8f8c0')
+    .then(response => (this.movies = response.data))
     .catch(error => {
       console.log(error)
       this.errored = true
