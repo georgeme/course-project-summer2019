@@ -2,6 +2,7 @@
   <div>
     <MoviesImg />
     <ImagesMovies />
+    <MovieList />
     <Footer />
   </div>
 </template>
@@ -10,6 +11,7 @@
 <script>
 import MoviesImg from "~/components/MoviesImg.vue";
 import ImagesMovies from "~/components/ImagesMovies.vue";
+import MovieList from "~/components/MovieList.vue";
 import Footer from "~/components/Footer.vue";
 
 export default {
@@ -17,6 +19,7 @@ export default {
   components: {
     MoviesImg,
     ImagesMovies,
+    MovieList,
     Footer
   }
 }

@@ -1,41 +1,17 @@
-<!-- <template>
-<div>
+<template>
  <article class="card">
 	 <img :src="country.flag" :alt="country.name" class="card__img">
 	 <h2 class="card__title">{{ country.name }}</h2>
 	 <p class="card__copy">{{ country.subregion }}</p>
  </article>
-<div>
 </template>
 
 <script>
 export default {
-  name: CardAPI,
 	props: {
 		country: Object
 	}
-},
-
-data () {
-  return {
-    loading: true,
-    countries: null,
-    errored:false
-  }
-},
-
-mounted () {
-  axios
-    .get('https://restcountries.eu/rest/v2/region/americas')
-    .then(response => (this.countries = response.data))
-    .catch(error => {
-      console.log(error)
-      this.errored=true
-    })
-    .finally (() => this.loading = false)
-  }
 }
-
 </script>
 
 
@@ -58,4 +34,4 @@ mounted () {
 		font-size: .875rem;
 	}
 }
-</style> -->
+</style>
