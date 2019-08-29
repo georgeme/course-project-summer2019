@@ -12,8 +12,8 @@
 </template>
 
 <script>
-import CardAPI from '~/components/CardAPI.vue'
-import axios from 'axios'
+import CardAPI from '~/components/CardAPI.vue';
+import axios from 'axios';
 
 export default {
   components: {
@@ -26,18 +26,25 @@ export default {
       errored: false
     }
   },
-  mounted () {
-  axios
-    .get('http://www.omdbapi.com/?i=tt3896198&apikey=bb8f8c0')
-    .then(response => (this.movies = response.data))
-    .catch(error => {
-      console.log(error)
-      this.errored = true
-    })
-    .finally(() => this.loading = false)
-  }
 
-}
+  mounted() {
+    axios
+      .get("http://www.omdbapi.com/?s=world&apikey=bb8f8c0")
+      .then(response => {
+        const sorted = response.data.Search.sort((init, compare) => {
+          return init.Title.toLowerCase() > compare.Title.toLowerCase()
+            ? 1
+            : -1;
+        });
+        this.movies = sorted;
+      })
+      .catch(error => {
+        console.log(error);
+        this.errored = true;
+      })
+      .finally(() => (this.loading = false));
+  }
+};
 </script>
 
 <style>

@@ -6,7 +6,7 @@
         <h3 class="display-3">stars: they're just like us!</h3>
         <p class="lead">Find a movie to watch based on your favorite stars.</p>
         <img
-          src="@/assets/images/his-girl-friday-grant-russell.jpg"
+          src="~/assets/images/his-girl-friday-grant-russell.jpg"
           class="img-fluid rounded-circle"
           alt="Image of His Girl Friday stars"
         />
