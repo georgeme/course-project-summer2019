@@ -7,8 +7,8 @@
 
 <!-- Importing the jumbotron and footer components for the home page -->
 <script>
-import Jumbotron from "~/components/Jumbotron.vue";
-import Footer from "~/components/Footer.vue";
+import Jumbotron from "@/components/Jumbotron.vue";
+import Footer from "@/components/Footer.vue";
 
 export default {
   name: "home",

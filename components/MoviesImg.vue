@@ -14,8 +14,8 @@
 
 <script>
 // Importing the components for the images and named slot
-import Images from "~/components/Images.vue";
-import SlotsHeader from "~/components/SlotsHeader.vue";
+import Images from "@/components/Images.vue";
+import SlotsHeader from "@/components/SlotsHeader.vue";
 
 export default {
   name: "MoviesImg",

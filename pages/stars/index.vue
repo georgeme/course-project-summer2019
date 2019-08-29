@@ -7,8 +7,8 @@
 
 <!-- Importing the card and footer components for the stars page -->
 <script>
-import Card from "~/components/Card.vue";
-import Footer from "~/components/Footer.vue";
+import Card from "@/components/Card.vue";
+import Footer from "@/components/Footer.vue";
 
 export default {
   name: "stars",

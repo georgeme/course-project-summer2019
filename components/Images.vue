@@ -12,7 +12,7 @@
 
 <script>
 // Importing the mixin for the image border
-import { toggle } from "~/assets/mixins/border.js";
+import { toggle } from "@/assets/mixins/border.js";
 
 export default {
   name: "Images",

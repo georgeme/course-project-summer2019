@@ -15,13 +15,16 @@ export default {
 </script>
 
 
-<style>
+<style lang="scss">
 .cardAPI {
 	margin: 1rem;
 	border: 1px solid #000;
 	padding: 1.5rem;
 	max-width: 200px;
 	min-height: 200px;
+	&__img {
+		display: block;
+		margin-bottom: 1rem;
 	}
 	&__title {
 		font-size: 1rem;
@@ -30,4 +33,5 @@ export default {
 	&__copy {
 		font-size: .875rem;
 	}
+}
 </style>

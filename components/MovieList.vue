@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import CardAPI from '~/components/CardAPI.vue';
+import CardAPI from '@/components/CardAPI.vue';
 import axios from 'axios';
 
 export default {
