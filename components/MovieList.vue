@@ -29,7 +29,7 @@ export default {
 
   mounted() {
     axios
-      .get("http://www.omdbapi.com/?s=world&apikey=bb8f8c0")
+      .get("https://www.omdbapi.com/?s=world&apikey=bb8f8c0")
       .then(response => {
         const sorted = response.data.Search.sort((init, compare) => {
           return init.Title.toLowerCase() > compare.Title.toLowerCase()
