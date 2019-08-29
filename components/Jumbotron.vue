@@ -11,7 +11,7 @@
 
 <!-- Jumbotron for home page content -->
   <div class="jumbotron jumbotron-fluid">
-    <div class="container">
+    <div>
       <b-jumbotron class="jumboHeader" header="slē-pər mü-vē">
         <p class="lead">"Sleeper" is a term used in the entertainment industry for a film that plays successfully for a long period and becomes a big success, despite having relatively little promotion or lacking a successful opening.</p>
         <p class="lead">Screenings for these films are held in an area conducive to the film's demographic. In the case of "Sleepless in Seattle", a romantic comedy, screenings were held at suburban shopping malls where romantic couples in their mid
