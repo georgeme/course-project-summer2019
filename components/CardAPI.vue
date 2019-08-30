@@ -1,6 +1,6 @@
 <template>
   <div :class="{ imgBorder: isShowing }">
-    <article class="cardAPI" @mouseover="toggleShow">
+    <article class="cardAPI" @mouseover="isShowing = true" @mouseleave="isShowing = false">
      <p class="cardAPI__img"><a :href="movie.Poster"><i class="fas fa-image"></i><i class="fas fa-external-link-alt"></i></a></p>
   	 <h2 class="cardAPI__title">{{ movie.Title }}</h2>
   	 <p class="cardAPI__year">Year: {{ movie.Year }}</p>
@@ -32,11 +32,11 @@ export default {
 <style lang="scss">
 .cardAPI {
 	margin: 1rem;
-	// border: 1px solid #000080;
 	padding: 1.5rem;
 	max-width: 200px;
 	min-height: 200px;
   background-color: #ffffff;
+  border-radius: 50%;
 	&__img {
 		display: block;
 		margin-bottom: 1rem;
@@ -69,6 +69,11 @@ export default {
 
 .imgBorder {
   border: 3px solid #000080;
-  background-color: #ff99dd;
+  background-color: #f5c518;
+  border-radius: 50%;
+-webkit-transition: -webkit-transform 2s ease-in-out;
+        transition:         transform 2s ease-in-out;
+-webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
 }
 </style>

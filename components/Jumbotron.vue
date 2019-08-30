@@ -17,7 +17,7 @@
         <p class="lead">Screenings for these films are held in an area conducive to the film's demographic. In the case of "Sleepless in Seattle", a romantic comedy, screenings were held at suburban shopping malls where romantic couples in their mid
           20s to early 30s spent Saturday afternoons before seeing a new film. In theory, a successful screening leads to word-of-mouth marketing, as it compels viewers to discuss an interesting, low-key film with co-workers when they return to work
           after their weekend.</p>
-        <b-button variant="primary" href="@/views/Movies.vue">Find Movies!</b-button>
+        <b-button variant="primary" href="movies">Find Movies!</b-button>
         <p class="lead">Note: not all of these movies were sleepers, but they're all great movies!</p>
       </b-jumbotron>
     </div>
