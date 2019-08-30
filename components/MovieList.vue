@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <h1 class="heading">Countries of Europe</h1>
+    <h1 class="heading">More Movie Fun!</h1>
     <section class="container" v-if="movies">
         <CardAPI
           v-for="movie of movies"
@@ -23,7 +23,7 @@ export default {
     return {
       loading: true,
       movies: null,
-      errored: false
+      errored: false,
     }
   },
 
@@ -47,7 +47,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .container {
   min-height: 100vh;
   max-width: 1200px;

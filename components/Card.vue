@@ -147,6 +147,6 @@ export default {
 
 .card-header {
   font-size: 2rem;
-  color: #007bff;
+  color: #000080;
 }
 </style>

@@ -10,28 +10,28 @@
         <div class="col-xl-3 col-lg-3 col-sm-6 col-12 p-3">
           <h5 class="display-5">Comedy</h5>
             <b-list-group>
-              <b-list-group-item class="movieList" v-for="(item, index) in comedy">{{ item.movie }}</b-list-group-item>
+              <b-list-group-item class="movieList" v-for="(item, index) in comedy">{{ item.movie }} <i class="fas fa-info-circle"></i></b-list-group-item>
             </b-list-group>
         </div>
 
         <div class="col-xl-3 col-lg-3 col-sm-6 col-12 p-3">
           <h5 class="display-5">Romance</h5>
           <b-list-group>
-            <b-list-group-item class="movieList" v-for="(item, index) in romance">{{ item.movie }}</b-list-group-item>
+            <b-list-group-item class="movieList" v-for="(item, index) in romance">{{ item.movie }} <i class="fas fa-info-circle"></i></b-list-group-item>
           </b-list-group>
         </div>
 
         <div class="col-xl-3 col-lg-3 col-sm-6 col-12 p-3">
           <h5 class="display-5">Musical</h5>
           <b-list-group>
-            <b-list-group-item class="movieList" v-for="(item, index) in musical">{{ item.movie }}</b-list-group-item>
+            <b-list-group-item class="movieList" v-for="(item, index) in musical">{{ item.movie }} <i class="fas fa-info-circle"></i></b-list-group-item>
           </b-list-group>
         </div>
 
         <div class="col-xl-3 col-lg-3 col-sm-6 col-12 p-3">
           <h5 class="display-5">Drama or Thriller</h5>
           <b-list-group>
-            <b-list-group-item class="movieList" v-for="(item, index) in dramaThriller">{{ item.movie }}</b-list-group-item>
+            <b-list-group-item class="movieList" v-for="(item, index) in dramaThriller">{{ item.movie }} <i class="fas fa-info-circle"></i></b-list-group-item>
           </b-list-group>
         </div>
       </div>
@@ -121,13 +121,18 @@ export default {
 }
 
 .movieList {
-  color: #007bff;
+  color: #000080;
   font-size: 1.5em;
+}
+
+.fa-info-circle {
+  color: #f5c518;
+  font-size: 1em;
 }
 
 @media screen and (max-width: 1025px) {
   .movieList {
-    font-size: 1em;
+    font-size: 1rem;
   }
 }
 </style>

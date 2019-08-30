@@ -6,6 +6,9 @@ export default {
   */
   head: {
     title: process.env.npm_package_name || '',
+    script: [
+      { src: 'https://kit.fontawesome.com/4b83b99470.js'}
+    ],
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
