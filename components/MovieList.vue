@@ -1,7 +1,8 @@
 <template>
   <div class="wrapper">
     <h1 class="heading">More Movie Fun!</h1>
-    <section class="container" v-if="movies">
+    <h3 class="subHeading">Have some fun with some "world" movies too!</h3>
+    <section id="imgBorder" class="container" v-if="movies">
         <CardAPI
           v-for="movie of movies"
           :key="movie.id"
@@ -49,8 +50,6 @@ export default {
 
 <style scoped>
 .container {
-  min-height: 100vh;
-  max-width: 1200px;
   margin: auto;
   display: flex;
   justify-content: center;
@@ -61,33 +60,16 @@ export default {
 
 .heading {
   text-align: center;
-  font-size: 2rem;
-  color: #555;
+  font-size: 3rem;
+  color: #000080;
   margin: 2rem auto;
 }
 
-img {
-  max-width: 150px;
-}
-
-.title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+.subHeading {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #000080;
+  margin: 2rem auto;
 }
 </style>

@@ -10,28 +10,28 @@
         <div class="col-xl-3 col-lg-3 col-sm-6 col-12 p-3">
           <h5 class="display-5">Comedy</h5>
             <b-list-group>
-              <b-list-group-item class="movieList" v-for="(item, index) in comedy">{{ item.movie }} <i class="fas fa-info-circle"></i></b-list-group-item>
+              <b-list-group-item class="movieList" v-for="(item, index) in comedy">{{ item.movie }} <a :href="'https://www.imdb.com/title/' + item.imdb"><i class="fas fa-info-circle"></i><i class="fas fa-external-link-alt"></i></a></b-list-group-item>
             </b-list-group>
         </div>
 
         <div class="col-xl-3 col-lg-3 col-sm-6 col-12 p-3">
           <h5 class="display-5">Romance</h5>
           <b-list-group>
-            <b-list-group-item class="movieList" v-for="(item, index) in romance">{{ item.movie }} <i class="fas fa-info-circle"></i></b-list-group-item>
+            <b-list-group-item class="movieList" v-for="(item, index) in romance">{{ item.movie }} <a :href="'https://www.imdb.com/title/' + item.imdb"><i class="fas fa-info-circle"></i><i class="fas fa-external-link-alt"></i></a></b-list-group-item>
           </b-list-group>
         </div>
 
         <div class="col-xl-3 col-lg-3 col-sm-6 col-12 p-3">
           <h5 class="display-5">Musical</h5>
           <b-list-group>
-            <b-list-group-item class="movieList" v-for="(item, index) in musical">{{ item.movie }} <i class="fas fa-info-circle"></i></b-list-group-item>
+            <b-list-group-item class="movieList" v-for="(item, index) in musical">{{ item.movie }} <a :href="'https://www.imdb.com/title/' + item.imdb"><i class="fas fa-info-circle"></i><i class="fas fa-external-link-alt"></i></a></b-list-group-item>
           </b-list-group>
         </div>
 
         <div class="col-xl-3 col-lg-3 col-sm-6 col-12 p-3">
           <h5 class="display-5">Drama or Thriller</h5>
           <b-list-group>
-            <b-list-group-item class="movieList" v-for="(item, index) in dramaThriller">{{ item.movie }} <i class="fas fa-info-circle"></i></b-list-group-item>
+            <b-list-group-item class="movieList" v-for="(item, index) in dramaThriller">{{ item.movie }} <a :href="'https://www.imdb.com/title/' + item.imdb"><i class="fas fa-info-circle"></i><i class="fas fa-external-link-alt"></i></a></b-list-group-item>
           </b-list-group>
         </div>
       </div>
@@ -48,61 +48,74 @@ export default {
       comedy: [
         {
           id: 7,
-          movie: "The Bachelor and the Bobby Soxer"
+          movie: "The Bachelor and the Bobby Soxer",
+          imdb: "tt0039169"
         },
         {
           id: 8,
-          movie: "The Big Picture"
+          movie: "The Big Picture",
+          imdb: "tt0096926"
         },
         {
           id: 9,
-          movie: "Joe Versus the Volcano"
+          movie: "Joe Versus the Volcano",
+          imdb: "tt0099892"
         },
         {
           id: 10,
-          movie: "Lover Come Back"
+          movie: "Lover Come Back",
+          imdb: "tt0055100"
         },
         {
           id: 11,
-          movie: "My Favorite Wife"
+          movie: "My Favorite Wife",
+          imdb: "tt0029284"
         },
         {
           id: 12,
-          movie: "Pillow Talk"
+          movie: "Pillow Talk",
+          imdb: "tt0053172"
         },
         {
           id: 13,
-          movie: "Send Me No Flowers"
+          movie: "Send Me No Flowers",
+          imdb: "tt0058571"
         }
       ],
       romance: [
         {
           id: 14,
-          movie: "The Bishop's Wife"
+          movie: "The Bishop's Wife",
+          imdb: "tt0039190"
         },
         {
           id: 15,
-          movie: "She's Having A Baby"
+          movie: "She's Having A Baby",
+          imdb: "tt0096094"
         }
       ],
       musical: [
         {
           id: 16,
-          movie: "Strictly Ballroom"
+          movie: "Strictly Ballroom",
+          imdb: "tt0105488"
         }
       ],
       dramaThriller: [
         {
           id: 17,
-          movie: "His Girl Friday"
+          movie: "His Girl Friday",
+          imdb: "tt0032599"
         },
         {
           id: 18,
-          movie: "Shadow of a Doubt"
+          movie: "Shadow of a Doubt",
+          imdb: "tt0036342"
         },
         {
           id: 19,
-          movie: "Tremors"
+          movie: "Tremors",
+          imdb: "tt0100814"
         }
       ],
     };

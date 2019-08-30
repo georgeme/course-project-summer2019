@@ -1,26 +1,38 @@
 <template>
- <article class="cardAPI">
-   <p class="cardAPI__img"><a :href="movie.Poster"><i class="fas fa-image"></i></a></p>
-	 <h2 class="cardAPI__title">{{ movie.Title }}</h2>
-	 <p class="cardAPI__year">Year: {{ movie.Year }}</p>
-   <p class="cardAPI__imdb"><i class="fab fa-imdb"></i></p>
- </article>
+  <div :class="{ imgBorder: isShowing }">
+    <article class="cardAPI" @mouseover="toggleShow">
+     <p class="cardAPI__img"><a :href="movie.Poster"><i class="fas fa-image"></i><i class="fas fa-external-link-alt"></i></a></p>
+  	 <h2 class="cardAPI__title">{{ movie.Title }}</h2>
+  	 <p class="cardAPI__year">Year: {{ movie.Year }}</p>
+     <p class="cardAPI__imdb"><a :href="'https://www.imdb.com/title/' + movie.imdbID"><i class="fab fa-imdb"></i><i class="fas fa-external-link-alt"></i></a></p>
+   </article>
+  </div>
 </template>
 
 <script>
+import { toggle } from "@/assets/mixins/border.js";
+
 export default {
   name: "CardAPI",
 	props: {
-		movie: Object
-	}
-}
+		movie: Object,
+    Year: Number,
+    Title: String
+	},
+  mixins: [toggle],
+  data() {
+    return {
+      isShowing: false
+    };
+  }
+};
 </script>
 
 
 <style lang="scss">
 .cardAPI {
 	margin: 1rem;
-	border: 1px solid #000080;
+	// border: 1px solid #000080;
 	padding: 1.5rem;
 	max-width: 200px;
 	min-height: 200px;
@@ -49,5 +61,14 @@ export default {
 .fa-imdb {
   color: #f5c518;
   font-size: 4rem;
+}
+
+.fa-external-link-alt {
+  font-size: 0.75rem;
+}
+
+.imgBorder {
+  border: 3px solid #000080;
+  background-color: #ff99dd;
 }
 </style>
