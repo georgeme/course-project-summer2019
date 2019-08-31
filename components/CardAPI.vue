@@ -71,9 +71,7 @@ export default {
   border: 3px solid #000080;
   background-color: #f5c518;
   border-radius: 50%;
--webkit-transition: -webkit-transform 2s ease-in-out;
-        transition:         transform 2s ease-in-out;
--webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
+  transition: all 2s ease-in-out;
+  transform: scale(1.1);
 }
 </style>
