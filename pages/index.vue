@@ -15,6 +15,14 @@ export default {
   components: {
     Jumbotron,
     Footer
+  },
+  head () {
+    return {
+      title: 'Home',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Home page for Movie Fun site with lesser known movies' }
+      ]
+    }
   }
-};
+}
 </script>

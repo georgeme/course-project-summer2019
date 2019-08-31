@@ -18,6 +18,14 @@ export default {
     Accordion,
     Radio,
     Footer
+  },
+  head () {
+    return {
+      title: 'Trivia',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Trivia page for facts and stars of lesser known movies' }
+      ]
+    }
   }
 }
 </script>

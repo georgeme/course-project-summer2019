@@ -21,6 +21,14 @@ export default {
     ImagesMovies,
     MovieList,
     Footer
+  },
+  head () {
+    return {
+      title: 'Movies',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Movies list for lesser known fun movies' }
+      ]
+    }
   }
 }
 </script>

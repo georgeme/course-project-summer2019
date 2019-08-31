@@ -15,6 +15,14 @@ export default {
   components: {
     Card,
     Footer
+  },
+  head () {
+    return {
+      title: 'Stars',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Stars page with information about movie stars from lesser known movies' }
+      ]
+    }
   }
 }
 </script>
