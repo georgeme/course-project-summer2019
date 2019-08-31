@@ -23,7 +23,8 @@ export default {
     return {
       title: 'Trivia',
       meta: [
-        { hid: 'description', name: 'description', content: 'Trivia page for facts and stars of lesser known movies' }
+        { hid: 'description', name: 'description', content: 'Trivia page for facts and stars of lesser known movies' },
+        { hid: 'keywords', name: 'keywords', content: 'movie, movies, lesser known movies, lesser-known movies, sleeper movies' }
       ]
     }
   }
