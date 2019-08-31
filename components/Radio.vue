@@ -10,13 +10,13 @@
   <b-form-group class="howWell">
     <b-form-radio-group v-model="selected" :options="options" name="radios-success" stacked></b-form-radio-group>
     <div v-if="selected === 'nailed'">
-      Sweet! But you should rewatch the movies <a href="movies">HERE</a> to be sure you really, really know them!
+      Sweet! But you should rewatch the movies <a href="/movies">HERE</a> to be sure you really, really know them!
     </div>
     <div v-else-if="selected === 'meh'">
-      Watch the movies <a href="movies">HERE</a> to learn what you don't know!
+      Watch the movies <a href="/movies">HERE</a> to learn what you don't know!
     </div>
     <div v-else-if="selected === 'ugh'">
-      Sounds like you'd better watch the movies <a href="movies">HERE</a> and stat!
+      Sounds like you'd better watch the movies <a href="/movies">HERE</a> and stat!
     </div>
     <div v-else>
       Make your selection!

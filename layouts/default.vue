@@ -38,9 +38,9 @@
         <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav>
             <nuxt-link class="navItem" to="/">Home</nuxt-link>
-            <nuxt-link class="navItem" to="movies">Movies</nuxt-link>
-            <nuxt-link class="navItem" to="stars">Stars</nuxt-link>
-            <nuxt-link class="navItem" to="trivia">Trivia</nuxt-link>
+            <nuxt-link class="navItem" to="/movies">Movies</nuxt-link>
+            <nuxt-link class="navItem" to="/stars">Stars</nuxt-link>
+            <nuxt-link class="navItem" to="/trivia">Trivia</nuxt-link>
           </b-navbar-nav>
         </b-collapse>
       </b-navbar>
