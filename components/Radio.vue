@@ -29,6 +29,7 @@
 <!-- Data (option selections) for the radio button options -->
 <script>
 export default {
+  name: "Radio",
   data() {
     return {
       selected: '',

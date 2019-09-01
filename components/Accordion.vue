@@ -72,7 +72,7 @@ export default {
 </script>
 
 <!-- Some styling for padding and screen sizes -->
-<style>
+<style scoped>
 .triviaHeader {
   padding: 1rem;
   text-align: left;
@@ -82,6 +82,28 @@ export default {
   h3.display-3 {
     font-size: 1.5em;
     font-weight: 600;
+  }
+}
+
+button {
+  background: #000080;
+  font-size: 1.5rem;
+}
+
+.card-text {
+  font-size: 1.5rem;
+  color: #000080;
+}
+
+@media screen and (max-width: 750px) {
+  button {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .card-text {
+    font-size: 1rem;
   }
 }
 </style>

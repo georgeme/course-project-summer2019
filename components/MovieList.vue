@@ -2,8 +2,8 @@
   <div class="wrapper">
     <h1 class="heading">More Movie Fun!</h1>
     <h3 class="subHeading">Have some fun with some "world" movies too!</h3>
-    <b-button class="worldButton" @click='worldButton = !worldButton'>Show Me World Movies!</b-button>
-    <section v-show='worldButton' class="container" v-if="movies">
+    <!-- <b-button class="worldButton" @click='worldButton = !worldButton'>Show Me World Movies!</b-button> -->
+    <section class="container" v-if="movies">
         <CardAPI
           v-for="movie of movies"
           :key="movie.id"
@@ -23,7 +23,7 @@ export default {
   },
   data() {
     return {
-      worldButton: false,
+      // worldButton: false,
       loading: true,
       movies: null,
       errored: false,

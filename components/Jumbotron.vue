@@ -27,6 +27,9 @@
 
 <!-- No script required for this single jumbotron -->
 <script>
+export default {
+  name: "Jumbotron"
+}
 </script>
 
 <!-- Miscellaneous styling for the cards -->

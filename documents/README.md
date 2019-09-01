@@ -29,3 +29,48 @@ In hindsight, to create an ideal SEO implementation for my site, I would do the 
 * Invest in analytics tools to ensure I knew who my users were and what they were doing once on my site (and what they weren't doing)
 
 In general, I would ensure that I fully understood who I wanted my target audience to be and why. Once I knew that, I would make sure that content I used on the site spoke to that audience. I would want to ensure they could find my site when searching for what it offers and that once on my site they could find what they want.
+
+### Content Stucture
+###### So I can go back and see it all again later
+| All image assets live in: assets > images                                   |                                                                                   |
+|-----------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
+|                                                                             |                                                                                   |
+| layouts > default.vue                                                       |                                                                                   |
+| header content (slide show of images at top of all pages, includes styling) |                                                                                   |
+| navigation (used on all pages, includes styling)                            |                                                                                   |
+|                                                                             |                                                                                   |
+| components (styling included w/ea component)                                | page/section usage                                                                |
+| Accordion.vue                                                               | trivia                                                                            |
+| Card.vue                                                                    | stars                                                                             |
+| CardAPI.vue                                                                 | movies ("world")                                                                  |
+| Footer.vue                                                                  | all pages                                                                         |
+| Images.vue                                                                  | movies (images of "movies/stars we know")                                         |
+| ImagesMovies.vue                                                            | movies ("lesser-known")                                                           |
+| Jumbotron.vue                                                               | home                                                                              |
+| MovieList.vue                                                               | movies (API call for "world")                                                     |
+| MoviesImg.vue                                                               | movies (images of "movies/stars we know")                                         |
+| Radio.vue                                                                   | trivia ("how well" below accordion)                                               |
+| SlotsHeader.vue                                                             | movies (header for "movies/stars we know")                                        |
+|                                                                             |                                                                                   |
+| mixins                                                                      | component usage                                                                   |
+| border.js                                                                   | Images.vue                                                                        |
+|                                                                             |                                                                                   |
+| components/mixins imported into components                                  | import/export                                                                     |
+| Accordion.vue                                                               | self-contained, exported to trivia/index                                          |
+| Card.vue                                                                    | self-contained, exported to stars/index                                           |
+| CardAPI.vue                                                                 | import border.js, exported to movies/index for use with images and "world" movies |
+| Footer.vue                                                                  | self-contained, exported to all pages                                             |
+| Images.vue                                                                  | import border.js, exported to movies/index for use with "movies/stars we know"    |
+| ImagesMovies.vue                                                            | self-contained, export to movies/index for list of "lesser-known" movies          |
+| Jumbotron.vue                                                               | self-contained, exported to index (home)                                          |
+| MovieList.vue                                                               | import CardAPI and axios, export to movies/index                                  |
+| MoviesImg.vue                                                               | import Images, SlotsHeader; export to movies/index                                |
+| Radio.vue                                                                   | self-contained, exported to trivia/index                                          |
+| SlotsHeader.vue                                                             | self-contained, exported to MoviesImg                                             |
+| border.js                                                                   | self-contained, exported to CardAPI and Images                                    |
+|                                                                             |                                                                                   |
+| pages                                                                       | components imported                                                               |
+| index                                                                       | Jumbotron, Footer                                                                 |
+| movies/index                                                                | MoviesImg (Images, SlotsHeader), ImagesMovies, MovieList (CardAPI, axios), Footer |
+| stars/index                                                                 | Card, Footer                                                                      |
+| trivia/index                                                                | Accordion, Radio, Footer                                                          |

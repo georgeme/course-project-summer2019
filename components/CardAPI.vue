@@ -38,7 +38,7 @@ export default {
     max-width: 200px;
     min-height: 200px;
     background-color: #ffffff;
-    border-radius: 50%;
+    border-radius: 25%;
     &__img {
         display: block;
         margin-bottom: 1rem;
@@ -72,7 +72,7 @@ export default {
 .imgBorder {
     border: 3px solid #000080;
     background-color: #f5c518;
-    border-radius: 50%;
+    border-radius: 25%;
     transition: all 2s ease-in-out;
     transform: scale(1.1);
 }
