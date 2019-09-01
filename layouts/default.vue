@@ -5,7 +5,7 @@
       <b-carousel
         id="carousel-1"
         v-model="slide"
-        :interval="4000"
+        :interval="5000"
         @sliding-start="onSlideStart"
         @sliding-end="onSlideEnd"
       >
@@ -37,10 +37,10 @@
 
         <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav>
-            <nuxt-link class="navItem" to="/">Home</nuxt-link>
-            <nuxt-link class="navItem" to="/movies">Movies</nuxt-link>
-            <nuxt-link class="navItem" to="/stars">Stars</nuxt-link>
-            <nuxt-link class="navItem" to="/trivia">Trivia</nuxt-link>
+            <nuxt-link class="navItem" to="/">home</nuxt-link>
+            <nuxt-link class="navItem" to="/movies">movies</nuxt-link>
+            <nuxt-link class="navItem" to="/stars">stars</nuxt-link>
+            <nuxt-link class="navItem" to="/trivia">trivia</nuxt-link>
           </b-navbar-nav>
         </b-collapse>
       </b-navbar>
@@ -59,25 +59,25 @@ export default {
           id: 1,
           image: require("@/assets/images/film.jpg"),
           alt: "Image of red movie film",
-          text: "Movie Fun!"
+          text: "movie fun!"
         },
         {
           id: 2,
           image: require("@/assets/images/movie-theater.jpg"),
           alt: "Image of darkened movie theater",
-          text: "Movie Fun!"
+          text: "movie fun!"
         },
         {
           id: 3,
           image: require("@/assets/images/film-reel.jpg"),
           alt: "Image of blue cinema film and reel",
-          text: "Movie Fun!"
+          text: "movie fun!"
         },
         {
           id: 4,
           image: require("@/assets/images/clapperboard.png"),
           alt: "Image ofmovie set clapperboard",
-          text: "Movie Fun!"
+          text: "movie fun!"
         }
       ],
       slide: 0,
@@ -98,11 +98,11 @@ export default {
 <!-- Miscellaneous styling for items in header and navigation -->
 <style>
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  color: #2c3e50;
+  /* color: #2c3e50; */
   margin-top: 60px;
 }
 
@@ -125,10 +125,21 @@ html body {
   background-color: #000080;
 }
 
+.navbar-brand img {
+  border-radius: 50%;
+}
+
 .navItem {
   font-size: 2em;
+  color: #f5c518;
   padding: 1rem;
   border-right: 1px solid #ffffff;
+}
+
+.navItem:hover {
+  color: #000000;
+  text-decoration: none;
+  background: #f5c518;
 }
 
 .navItem:last-of-type {

@@ -18,7 +18,7 @@ export default {
   },
   head () {
     return {
-      title: 'Movie Fun! - Stars',
+      title: 'movie fun! - stars',
       meta: [
         { hid: 'description', name: 'description', content: 'Stars page with information about movie stars from lesser known movies' },
         { hid: 'keywords', name: 'keywords', content: 'movie, movies, lesser known movies, lesser-known movies, sleeper movies' }

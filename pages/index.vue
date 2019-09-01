@@ -18,7 +18,7 @@ export default {
   },
   head () {
     return {
-      title: 'Movie Fun! - Home',
+      title: 'movie fun! - home',
       meta: [
         { hid: 'description', name: 'description', content: 'Home page for Movie Fun site with lesser known movies' },
         { hid: 'keywords', name: 'keywords', content: 'movie, movies, lesser known movies, lesser-known movies, sleeper movies' }

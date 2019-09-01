@@ -14,11 +14,11 @@
     <div>
       <b-jumbotron class="jumboHeader" header="slē-pər mü-vē">
         <p class="lead">"Sleeper" is a term used in the entertainment industry for a film that plays successfully for a long period and becomes a big success, despite having relatively little promotion or lacking a successful opening.</p>
-        <p class="lead">Screenings for these films are held in an area conducive to the film's demographic. In the case of "Sleepless in Seattle", a romantic comedy, screenings were held at suburban shopping malls where romantic couples in their mid
+        <p class="lead last">Screenings for these films are held in an area conducive to the film's demographic. In the case of "Sleepless in Seattle", a romantic comedy, screenings were held at suburban shopping malls where romantic couples in their mid
           20s to early 30s spent Saturday afternoons before seeing a new film. In theory, a successful screening leads to word-of-mouth marketing, as it compels viewers to discuss an interesting, low-key film with co-workers when they return to work
           after their weekend.</p>
-        <nuxt-link to="/movies">Find Movies!</nuxt-link>
-        <p class="note">Note: not all of these movies were sleepers, but they're all great movies!</p>
+        <nuxt-link to="/movies" class="jumboButton">Find Movies!</nuxt-link>
+        <p class="lead note">Note: not all of these movies were sleepers, but they're all great movies!</p>
       </b-jumbotron>
     </div>
   </div>
@@ -31,24 +31,42 @@
 
 <!-- Miscellaneous styling for the cards -->
 <style>
-/* .jumboButton {
+.jumbotron {
+  border-radius: 50%;
+  text-align: center;
+}
+.jumboButton {
   background: #000080;
   text-decoration: none;
+  font-size: 1.5rem;
   color: #ffffff;
   padding: 1rem;
+  border-radius: 50%;
 }
 
 .jumboButton:hover {
-  color: #ffffff;
-} */
+  color: #000000;
+  text-decoration: none;
+  background: #f5c518;
+}
+
+.last {
+  margin-bottom: 2rem;
+}
 
 .note {
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 @media screen and (max-width: 769px) {
   .display-3 {
     font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 700px) {
+.jumbotron {
+  border-radius: 0%;
   }
 }
 </style>
