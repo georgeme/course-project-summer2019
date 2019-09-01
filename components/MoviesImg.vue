@@ -1,15 +1,15 @@
 <template>
+<div>
+<!-- Header for the page using named slot -->
   <div>
-    <!-- Header for the page using named slot -->
-    <div>
-      <div class="moviesHeader">
-        <slots-header></slots-header>
-      </div>
+    <div class="moviesHeader">
+      <slots-header></slots-header>
     </div>
-    <section id="imgBorder" class="movies d-flex flex-row" v-if="posts">
-      <Images v-for="post in posts" v-bind:post="post" v-bind:key="post.id"></Images>
-    </section>
   </div>
+  <section id="imgBorder" class="movies d-flex flex-row" v-if="posts">
+    <Images v-for="post in posts" v-bind:post="post" v-bind:key="post.id"></Images>
+  </section>
+</div>
 </template>
 
 <script>
@@ -36,11 +36,10 @@ export default {
     }
   },
 
-  // Image data
+  // Image data array
   data() {
     return {
-      posts: [
-        {
+      posts: [{
           id: 1,
           image: require("@/assets/images/007.jpg"),
           alt: "Image of Daniel Craig as James Bond",

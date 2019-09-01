@@ -6,7 +6,7 @@
     <p class="lead">These weren't easy so don't worry if you didn't do very well.</p>
   </div>
 
-<!-- Creating the form with radio buttons to utilize v-if/else statements -->
+<!-- Creating the form with radio buttons to utilize v-if/else statements for how well did you do -->
   <b-form-group class="howWell">
     <b-form-radio-group v-model="selected" :options="options" name="radios-success" stacked></b-form-radio-group>
     <div v-if="selected === 'nailed'">

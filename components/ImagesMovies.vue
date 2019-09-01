@@ -1,133 +1,136 @@
 <template>
+<div class="container-fluid">
+<!-- Lists of lesser-known movies using array -->
+  <div class="moviesHeader">
+    <h5 class="display-5">And then there are movies we don't remember, never knew, or forgot...</h5>
+  </div>
+
+<!-- Creating the cards for comedu, including button to show/not show cards -->
   <div class="container-fluid">
-<!-- Lists of movies using array -->
-    <div class="moviesHeader">
-      <h5 class="display-5">And then there are movies we don't remember, never knew, or forgot...</h5>
-    </div>
+    <div class="row">
+      <div class="col-xl-3 col-lg-3 col-sm-6 col-12 p-3">
+        <h5 class="display-5">Comedy</h5>
+        <b-button @click='comedyButton = !comedyButton'>Show Comedies</b-button>
+        <b-card v-show='comedyButton' class="mt-2" v-for="detail in comedy" :key="detail.id" :header="detail.title">
+          <b-list-group flush>
+            <b-list-group-item><strong>Year: </strong>{{ detail.year }}</b-list-group-item>
+            <b-list-group-item><strong>Genre: </strong>{{ detail.genre }}</b-list-group-item>
+            <b-list-group-item><strong>Rated: </strong>{{ detail.rated }}</b-list-group-item>
+          </b-list-group>
 
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-xl-3 col-lg-3 col-sm-6 col-12 p-3">
-          <h5 class="display-5">Comedy</h5>
-          <b-button @click='comedyButton = !comedyButton'>Show Comedies</b-button>
-            <b-card v-show='comedyButton' class="mt-2" v-for="detail in comedy" :key="detail.id" :header="detail.title">
-              <b-list-group flush>
-              <b-list-group-item><strong>Year: </strong>{{ detail.year }}</b-list-group-item>
-              <b-list-group-item><strong>Genre: </strong>{{ detail.genre }}</b-list-group-item>
-              <b-list-group-item><strong>Rated: </strong>{{ detail.rated }}</b-list-group-item>
-            </b-list-group>
+          <b-card-body>
+            <b-card-title>Plot</b-card-title>
+            <b-card-text>{{detail.plot}}</b-card-text>
+          </b-card-body>
 
-            <b-card-body>
-              <b-card-title>Plot</b-card-title>
-              <b-card-text>{{detail.plot}}</b-card-text>
-            </b-card-body>
+          <b-card-body>
+            <b-card-title>Starring</b-card-title>
+            <b-card-text>{{detail.actors}}</b-card-text>
+          </b-card-body>
 
-            <b-card-body>
-              <b-card-title>Starring</b-card-title>
-              <b-card-text>{{detail.actors}}</b-card-text>
-            </b-card-body>
+          <b-card-body>
+            <b-card-title>Poster</b-card-title>
+            <b-card-text><a :href="detail.poster" target="_blank"><i class="fas fa-image"></i><i class="fas fa-external-link-alt"></i></a></b-card-text>
+          </b-card-body>
+        </b-card>
+      </div>
 
-            <b-card-body>
-              <b-card-title>Poster</b-card-title>
-              <b-card-text><a :href="detail.poster" target="_blank"><i class="fas fa-image"></i><i class="fas fa-external-link-alt"></i></a></b-card-text>
-            </b-card-body>
-          </b-card>
-        </div>
+<!-- Creating the cards for romance, including button to show/not show cards -->
+      <div class="col-xl-3 col-lg-3 col-sm-6 col-12 p-3">
+        <h5 class="display-5">Romance</h5>
+        <b-button @click='romanceButton = !romanceButton'>Show Romance</b-button>
+        <b-card v-show='romanceButton' class="mt-2" v-for="detail in romance" :key="detail.id" :header="detail.title">
+          <b-list-group flush>
+            <b-list-group-item><strong>Year: </strong>{{ detail.year }}</b-list-group-item>
+            <b-list-group-item><strong>Genre: </strong>{{ detail.genre }}</b-list-group-item>
+            <b-list-group-item><strong>Rated: </strong>{{ detail.rated }}</b-list-group-item>
+          </b-list-group>
 
-        <div class="col-xl-3 col-lg-3 col-sm-6 col-12 p-3">
-          <h5 class="display-5">Romance</h5>
-          <b-button @click='romanceButton = !romanceButton'>Show Romance</b-button>
-          <b-card v-show='romanceButton' class="mt-2" v-for="detail in romance" :key="detail.id" :header="detail.title">
-            <b-list-group flush>
-              <b-list-group-item><strong>Year: </strong>{{ detail.year }}</b-list-group-item>
-              <b-list-group-item><strong>Genre: </strong>{{ detail.genre }}</b-list-group-item>
-              <b-list-group-item><strong>Rated: </strong>{{ detail.rated }}</b-list-group-item>
-            </b-list-group>
+          <b-card-body>
+            <b-card-title>Plot</b-card-title>
+            <b-card-text>{{detail.plot}}</b-card-text>
+          </b-card-body>
 
-            <b-card-body>
-              <b-card-title>Plot</b-card-title>
-              <b-card-text>{{detail.plot}}</b-card-text>
-            </b-card-body>
+          <b-card-body>
+            <b-card-title>Starring</b-card-title>
+            <b-card-text>{{detail.actors}}</b-card-text>
+          </b-card-body>
 
-            <b-card-body>
-              <b-card-title>Starring</b-card-title>
-              <b-card-text>{{detail.actors}}</b-card-text>
-            </b-card-body>
+          <b-card-body>
+            <b-card-title>Poster</b-card-title>
+            <b-card-text><a :href="detail.poster" target="_blank"><i class="fas fa-image"></i><i class="fas fa-external-link-alt"></i></a></b-card-text>
+          </b-card-body>
+        </b-card>
+      </div>
 
-            <b-card-body>
-              <b-card-title>Poster</b-card-title>
-              <b-card-text><a :href="detail.poster" target="_blank"><i class="fas fa-image"></i><i class="fas fa-external-link-alt"></i></a></b-card-text>
-            </b-card-body>
-          </b-card>
-        </div>
+<!-- Creating the cards for musical, including button to show/not show cards -->
+      <div class="col-xl-3 col-lg-3 col-sm-6 col-12 p-3">
+        <h5 class="display-5">Musical</h5>
+        <b-button @click='musicalButton = !musicalButton'>Show Musical</b-button>
+        <b-card v-show='musicalButton' class="mt-2" v-for="detail in musical" :key="detail.id" :header="detail.title">
+          <b-list-group flush>
+            <b-list-group-item><strong>Year: </strong>{{ detail.year }}</b-list-group-item>
+            <b-list-group-item><strong>Genre: </strong>{{ detail.genre }}</b-list-group-item>
+            <b-list-group-item><strong>Rated: </strong>{{ detail.rated }}</b-list-group-item>
+          </b-list-group>
 
-        <div class="col-xl-3 col-lg-3 col-sm-6 col-12 p-3">
-          <h5 class="display-5">Musical</h5>
-          <b-button @click='musicalButton = !musicalButton'>Show Musical</b-button>
-          <b-card v-show='musicalButton' class="mt-2" v-for="detail in musical" :key="detail.id" :header="detail.title">
-            <b-list-group flush>
-              <b-list-group-item><strong>Year: </strong>{{ detail.year }}</b-list-group-item>
-              <b-list-group-item><strong>Genre: </strong>{{ detail.genre }}</b-list-group-item>
-              <b-list-group-item><strong>Rated: </strong>{{ detail.rated }}</b-list-group-item>
-            </b-list-group>
+          <b-card-body>
+            <b-card-title>Plot</b-card-title>
+            <b-card-text>{{detail.plot}}</b-card-text>
+          </b-card-body>
 
-            <b-card-body>
-              <b-card-title>Plot</b-card-title>
-              <b-card-text>{{detail.plot}}</b-card-text>
-            </b-card-body>
+          <b-card-body>
+            <b-card-title>Starring</b-card-title>
+            <b-card-text>{{detail.actors}}</b-card-text>
+          </b-card-body>
 
-            <b-card-body>
-              <b-card-title>Starring</b-card-title>
-              <b-card-text>{{detail.actors}}</b-card-text>
-            </b-card-body>
+          <b-card-body>
+            <b-card-title>Poster</b-card-title>
+            <b-card-text><a :href="detail.poster" target="_blank"><i class="fas fa-image"></i><i class="fas fa-external-link-alt"></i></a></b-card-text>
+          </b-card-body>
+        </b-card>
+      </div>
 
-            <b-card-body>
-              <b-card-title>Poster</b-card-title>
-              <b-card-text><a :href="detail.poster" target="_blank"><i class="fas fa-image"></i><i class="fas fa-external-link-alt"></i></a></b-card-text>
-            </b-card-body>
-          </b-card>
-        </div>
+<!-- Creating the cards for drama/thriller, including button to show/not show cards -->
+      <div class="col-xl-3 col-lg-3 col-sm-6 col-12 p-3">
+        <h5 class="display-5">Drama or Thriller</h5>
+        <b-button @click='dramaButton = !dramaButton'>Show Drama/Thriller</b-button>
+        <b-card v-show='dramaButton' class="mt-2" v-for="detail in dramaThriller" :key="detail.id" :header="detail.title">
+          <b-list-group flush>
+            <b-list-group-item><strong>Year: </strong>{{ detail.year }}</b-list-group-item>
+            <b-list-group-item><strong>Genre: </strong>{{ detail.genre }}</b-list-group-item>
+            <b-list-group-item><strong>Rated: </strong>{{ detail.rated }}</b-list-group-item>
+          </b-list-group>
 
-        <div class="col-xl-3 col-lg-3 col-sm-6 col-12 p-3">
-          <h5 class="display-5">Drama or Thriller</h5>
-          <b-button @click='dramaButton = !dramaButton'>Show Drama/Thriller</b-button>
-          <b-card v-show='dramaButton' class="mt-2" v-for="detail in dramaThriller" :key="detail.id" :header="detail.title">
-            <b-list-group flush>
-              <b-list-group-item><strong>Year: </strong>{{ detail.year }}</b-list-group-item>
-              <b-list-group-item><strong>Genre: </strong>{{ detail.genre }}</b-list-group-item>
-              <b-list-group-item><strong>Rated: </strong>{{ detail.rated }}</b-list-group-item>
-            </b-list-group>
+          <b-card-body>
+            <b-card-title>Plot</b-card-title>
+            <b-card-text>{{detail.plot}}</b-card-text>
+          </b-card-body>
 
-            <b-card-body>
-              <b-card-title>Plot</b-card-title>
-              <b-card-text>{{detail.plot}}</b-card-text>
-            </b-card-body>
+          <b-card-body>
+            <b-card-title>Starring</b-card-title>
+            <b-card-text>{{detail.actors}}</b-card-text>
+          </b-card-body>
 
-            <b-card-body>
-              <b-card-title>Starring</b-card-title>
-              <b-card-text>{{detail.actors}}</b-card-text>
-            </b-card-body>
-
-            <b-card-body>
-              <b-card-title>Poster</b-card-title>
-              <b-card-text><a :href="detail.poster" target="_blank"><i class="fas fa-image"></i><i class="fas fa-external-link-alt"></i></a></b-card-text>
-            </b-card-body>
-          </b-card>
-        </div>
+          <b-card-body>
+            <b-card-title>Poster</b-card-title>
+            <b-card-text><a :href="detail.poster" target="_blank"><i class="fas fa-image"></i><i class="fas fa-external-link-alt"></i></a></b-card-text>
+          </b-card-body>
+        </b-card>
       </div>
     </div>
   </div>
+</div>
 </template>
 
-<!-- Displaying the list of movies by category -->
+<!-- Array for the list of each type of movie by category, including button state for show/not showing functionality -->
 <script>
 export default {
   name: "ImagesMovies",
   data() {
     return {
       comedyButton: false,
-      comedy: [
-        {
+      comedy: [{
           title: "The Bachelor and the Bobby-Soxer",
           year: 1947,
           rated: "Approved",
@@ -199,8 +202,7 @@ export default {
         },
       ],
       romanceButton: false,
-      romance: [
-        {
+      romance: [{
           title: "The Bishop's Wife",
           year: 1947,
           rated: "Not Rated",
@@ -222,21 +224,18 @@ export default {
         },
       ],
       musicalButton: false,
-      musical: [
-        {
-          title: "Strictly Ballroom",
-          year: 1992,
-          rated: "PG",
-          genre: "Comedy, Drama, Music, Romance",
-          actors: "Paul Mercurio, Tara Morice, Bill Hunter, Pat Thomson",
-          plot: "A maverick dancer risks his career by performing an unusual routine and sets out to succeed with a new partner.",
-          poster: "https://m.media-amazon.com/images/M/MV5BZGFkMDgwNTUtMTA5NC00YzMzLTljY2EtMWFiNjQ4OTBjMWUzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
-          id: 9
-        },
-      ],
+      musical: [{
+        title: "Strictly Ballroom",
+        year: 1992,
+        rated: "PG",
+        genre: "Comedy, Drama, Music, Romance",
+        actors: "Paul Mercurio, Tara Morice, Bill Hunter, Pat Thomson",
+        plot: "A maverick dancer risks his career by performing an unusual routine and sets out to succeed with a new partner.",
+        poster: "https://m.media-amazon.com/images/M/MV5BZGFkMDgwNTUtMTA5NC00YzMzLTljY2EtMWFiNjQ4OTBjMWUzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+        id: 9
+      }, ],
       dramaButton: false,
-      dramaThriller: [
-        {
+      dramaThriller: [{
           title: "His Girl Friday",
           year: 1940,
           rated: "Passed",
@@ -272,7 +271,7 @@ export default {
 };
 </script>
 
-<!-- Some simple styling to add color to header and some padding -->
+<!-- Some simple styling to add color, padding, screen size display -->
 <style>
 .display-5 {
   font-weight: 700;
@@ -316,6 +315,5 @@ export default {
     font-size: 1rem;
   }
 }
-
 </style>
 <!-- test -->

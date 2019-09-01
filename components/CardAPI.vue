@@ -1,4 +1,5 @@
 <template>
+<!-- Creating the class to be assigned if border is toggled on -->
 <div :class="{ imgBorder: isShowing }">
   <article class="cardAPI" @mouseover="isShowing = true" @mouseleave="isShowing = false">
     <p class="cardAPI__img"><a :href="movie.Poster" target="_blank"><i class="fas fa-image"></i><i class="fas fa-external-link-alt"></i></a></p>
@@ -9,11 +10,13 @@
 </div>
 </template>
 
+<!-- Importing the border.js mixin for the border on movie list items -->
 <script>
 import {
   toggle
 } from "@/assets/mixins/border.js";
 
+// Including props for validation
 export default {
   name: "CardAPI",
   props: {
@@ -30,7 +33,7 @@ export default {
 };
 </script>
 
-
+<!-- Styling for colors, sizes, and icons -->
 <style lang="scss">
 .cardAPI {
     margin: 1rem;

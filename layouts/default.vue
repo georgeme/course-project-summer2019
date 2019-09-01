@@ -1,61 +1,43 @@
 <template>
-  <div>
-    <!-- Header start (carousel) -->
-    <div class="carousel">
-      <b-carousel
-        id="carousel-1"
-        v-model="slide"
-        :interval="5000"
-        @sliding-start="onSlideStart"
-        @sliding-end="onSlideEnd"
-      >
-        <b-carousel-slide
-          v-for="item in carouselItems"
-          :key="item.id"
-          :caption="item.text"
-          :img-src="item.image"
-          fluid
-          :alt="item.alt"
-        ></b-carousel-slide>
-      </b-carousel>
-    </div>
-    <!-- End header -->
-
-    <!-- Navigation start (using router nav items) -->
-    <div class="navbar">
-      <b-navbar toggleable="lg" type="dark">
-        <b-navbar-brand to="/">
-          <img
-            src="@/assets/images/hollywood.jpg"
-            width="150"
-            height="60"
-            alt="Image of Hollywood sign"
-          />
-        </b-navbar-brand>
-
-        <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-
-        <b-collapse id="nav-collapse" is-nav>
-          <b-navbar-nav>
-            <nuxt-link class="navItem" to="/">home</nuxt-link>
-            <nuxt-link class="navItem" to="/movies">movies</nuxt-link>
-            <nuxt-link class="navItem" to="/stars">stars</nuxt-link>
-            <nuxt-link class="navItem" to="/trivia">trivia</nuxt-link>
-          </b-navbar-nav>
-        </b-collapse>
-      </b-navbar>
-    </div>
-    <!-- Navigation end -->
-    <nuxt />
+<div>
+<!-- Header start (carousel) -->
+  <div class="carousel">
+    <b-carousel id="carousel-1" v-model="slide" :interval="5000" @sliding-start="onSlideStart" @sliding-end="onSlideEnd">
+      <b-carousel-slide v-for="item in carouselItems" :key="item.id" :caption="item.text" :img-src="item.image" fluid :alt="item.alt"></b-carousel-slide>
+    </b-carousel>
   </div>
+<!-- End header -->
+
+<!-- Navigation start (using nuxt-link nav items) -->
+  <div class="navbar">
+    <b-navbar toggleable="lg" type="dark">
+      <b-navbar-brand to="/">
+        <img src="@/assets/images/hollywood.jpg" width="150" height="60" alt="Image of Hollywood sign" />
+      </b-navbar-brand>
+
+      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+
+      <b-collapse id="nav-collapse" is-nav>
+        <b-navbar-nav>
+          <nuxt-link class="navItem" to="/">home</nuxt-link>
+          <nuxt-link class="navItem" to="/movies">movies</nuxt-link>
+          <nuxt-link class="navItem" to="/stars">stars</nuxt-link>
+          <nuxt-link class="navItem" to="/trivia">trivia</nuxt-link>
+        </b-navbar-nav>
+      </b-collapse>
+    </b-navbar>
+  </div>
+<!-- Navigation end -->
+  <nuxt />
+</div>
 </template>
 
+<!-- Data array for images used in header slider -->
 <script>
 export default {
   data() {
     return {
-      carouselItems: [
-        {
+      carouselItems: [{
           id: 1,
           image: require("@/assets/images/film.jpg"),
           alt: "Image of red movie film",
@@ -84,6 +66,7 @@ export default {
       sliding: null
     };
   },
+// Methods to control the slide of the images
   methods: {
     onSlideStart(slide) {
       this.sliding = true;
@@ -95,7 +78,7 @@ export default {
 };
 </script>
 
-<!-- Miscellaneous styling for items in header and navigation -->
+<!-- Miscellaneous styling for items in header and navigation (color, padding, screen size customizations) -->
 <style>
 #app {
   font-family: Helvetica, Arial, sans-serif;

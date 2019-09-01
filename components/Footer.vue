@@ -1,6 +1,6 @@
 <template>
 <div class="footer">
-  <!-- Footer start -->
+<!-- Footer start -->
   <div>
     <footer>
       <h1 class="text-light">Movie Fun!</h1>
@@ -9,7 +9,7 @@
       <p class="lead text-light">POSITIVE results however are solely the fault of the site creator.</p>
     </footer>
   </div>
-  <!-- End Footer -->
+<!-- End Footer -->
 
 </div>
 </template>

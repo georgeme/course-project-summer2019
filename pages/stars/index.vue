@@ -1,4 +1,5 @@
 <template>
+<!-- Using all the necessary components for the page -->
   <div>
     <Card />
     <Footer />
@@ -10,6 +11,7 @@
 import Card from "@/components/Card.vue";
 import Footer from "@/components/Footer.vue";
 
+// Adding light SEO for the page
 export default {
   name: "stars",
   components: {

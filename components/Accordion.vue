@@ -1,6 +1,6 @@
 <template>
 <div role="tablist">
-  <!-- Creating the header for the accordion on the Trivia page -->
+<!-- Creating the header for the accordion on the Trivia page -->
   <div class="container d-flex align-items-center justify-content-center">
     <div class="triviaHeader my-auto">
       <h3 class="display-3">test your movie knowledge!</h3>
@@ -9,7 +9,7 @@
     </div>
   </div>
 
-  <!-- Creating the accordion iterating over the array in the script -->
+<!-- Creating the accordion iterating over the array in the script -->
   <b-card no-body class="mb-1" v-for="item in accordionItems" :key="item.accId">
     <b-card-header header-tag="header" class="p-1" role="tab">
       <b-button block v-b-toggle="'accordion-' + item.accId" variant="primary">{{ item.button }}</b-button>
@@ -71,7 +71,7 @@ export default {
 };
 </script>
 
-<!-- Some styling for padding and screen sizes -->
+<!-- Some styling for padding, colors, and screen sizes -->
 <style scoped>
 .triviaHeader {
   padding: 1rem;

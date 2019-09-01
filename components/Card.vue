@@ -1,43 +1,38 @@
 <template>
-  <div class="container-fluid">
-    <!-- Creating the header for the Stars page cards -->
-    <div>
-      <div class="starsHeader my-auto">
-        <h3 class="display-3">stars: they're just like us!</h3>
-        <p class="lead">Find a movie to watch based on your favorite stars.</p>
-        <img
-          src="~/assets/images/his-girl-friday-grant-russell.jpg"
-          class="img-fluid rounded-circle"
-          alt="Image of His Girl Friday stars"
-        />
-      </div>
-    </div>
-
-    <!-- Cards for each star -->
-    <div class="starsCards">
-      <b-card class="mt-2" v-for="card in cards" :card="card" :key="card.id" :header="card.name">
-        <b-card-body>
-          <b-card-title>Movies</b-card-title>
-          <b-card-text>{{card.movies}}</b-card-text>
-        </b-card-body>
-
-        <b-card-body>
-          <b-card-title>Short Bio</b-card-title>
-          <b-card-text class="bio">{{card.bio}}</b-card-text>
-        </b-card-body>
-      </b-card>
+<div class="container-fluid">
+<!-- Creating the header for the Stars page cards -->
+  <div>
+    <div class="starsHeader my-auto">
+      <h3 class="display-3">stars: they're just like us!</h3>
+      <p class="lead">Find a movie to watch based on your favorite stars.</p>
+      <img src="~/assets/images/his-girl-friday-grant-russell.jpg" class="img-fluid rounded-circle" alt="Image of His Girl Friday stars" />
     </div>
   </div>
+
+<!-- Cards for each star -->
+  <div class="starsCards">
+    <b-card class="mt-2" v-for="card in cards" :card="card" :key="card.id" :header="card.name">
+      <b-card-body>
+        <b-card-title>Movies</b-card-title>
+        <b-card-text>{{card.movies}}</b-card-text>
+      </b-card-body>
+
+      <b-card-body>
+        <b-card-title>Short Bio</b-card-title>
+        <b-card-text class="bio">{{card.bio}}</b-card-text>
+      </b-card-body>
+    </b-card>
+  </div>
+</div>
 </template>
 
-<!-- Script to pull the data into the cards from an array - note: not all stars data has been ported over yet as it's a lot of data to do -->
+<!-- Script to pull the data into the cards from an array -->
 <script>
 export default {
   name: "Card",
   data() {
     return {
-      cards: [
-        {
+      cards: [{
           name: "Kevin Bacon",
           movies: "The Big Picture, She's Having A Baby, Tremors",
           bio: `Kevin Norwood Bacon was born on July 8, 1958 in Philadelphia, Pennsylvania, to Ruth Hilda (Holmes), an elementary school teacher, and Edmund Norwood Bacon, a prominent architect who was on the cover of Time Magazine in November 1964. Kevin's early training as an actor came from The Manning Street. His debut as the strict Chip Diller in National Lampoon's Animal House (1978) almost seems like an inside joke, but he managed to escape almost unnoticed from that role. Diner (1982) became the turning point after a couple of television series and a number of less-than-memorable movie roles. In a cast of soon-to-be stars, he more than held his end up, and we saw a glimpse of the real lunatic image of The Bacon. He also starred in Footloose (1984), She's Having a Baby (1988), Tremors (1990) with Fred Ward, Flatliners (1990), and Apollo 13 (1995).`,
@@ -45,8 +40,7 @@ export default {
         },
         {
           name: "Cary Grant",
-          movies:
-            "The Bachelor and the Bobby-Soxer, The Bishop's Wife, His Girl Friday",
+          movies: "The Bachelor and the Bobby-Soxer, The Bishop's Wife, His Girl Friday",
           bio: `Cary Grant was born Archibald Alexander Leach on January 18, 1904 in Horfield, Bristol, England, to Elsie Maria (Kingdon) and Elias James Leach, who worked in a factory. In 1999, the American Film Institute named Grant the second male star of Golden Age of Hollywood cinema (after Humphrey Bogart). Grant was known for comedic and dramatic roles; his best-known films include Bringing Up Baby (1938), The Philadelphia Story (1940), His Girl Friday (1940), Arsenic and Old Lace (1944), Notorious (1946), An Affair to Remember (1957), North by Northwest (1959) and Charade (1963).`,
           id: 1
         },

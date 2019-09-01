@@ -1,4 +1,4 @@
-// Mixin for border toggle on images for Movies page
+// Mixin for border toggle on images and API results on movies page
 export const toggle = {
   data() {
     return {

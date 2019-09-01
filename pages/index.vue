@@ -1,5 +1,6 @@
 <template>
   <div>
+<!-- Using all the necessary components for the page -->
     <Jumbotron />
     <Footer />
   </div>
@@ -10,6 +11,7 @@
 import Jumbotron from "@/components/Jumbotron.vue";
 import Footer from "@/components/Footer.vue";
 
+// Adding light SEO for the page
 export default {
   name: "home",
   components: {

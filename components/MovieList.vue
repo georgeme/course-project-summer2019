@@ -1,20 +1,17 @@
 <template>
-  <div class="wrapper">
-    <h1 class="heading">More Movie Fun!</h1>
-    <h3 class="subHeading">Have some fun with some "world" movies too!</h3>
-    <!-- <b-button class="worldButton" @click='worldButton = !worldButton'>Show Me World Movies!</b-button> -->
-    <section class="container" v-if="movies">
-        <CardAPI
-          v-for="movie of movies"
-          :key="movie.id"
-          :movie="movie"
-        />
-    </section>
-  </div>
+<div class="wrapper">
+  <h1 class="heading">More Movie Fun!</h1>
+  <h3 class="subHeading">Have some fun with some "world" movies too!</h3>
+<!-- Creating the section for the cards created with data from the API -->
+  <section class="container" v-if="movies">
+    <CardAPI v-for="movie of movies" :key="movie.id" :movie="movie" />
+  </section>
+</div>
 </template>
 
 <script>
 import CardAPI from '@/components/CardAPI.vue';
+// Axios import to use for API call
 import axios from 'axios';
 
 export default {
@@ -23,21 +20,21 @@ export default {
   },
   data() {
     return {
-      // worldButton: false,
       loading: true,
       movies: null,
       errored: false,
     }
   },
 
+// Axios call to get data for movies with "world" in the title
   mounted() {
     axios
       .get("https://www.omdbapi.com/?s=world&apikey=bb8f8c0")
       .then(response => {
         const sorted = response.data.Search.sort((init, compare) => {
-          return init.Title.toLowerCase() > compare.Title.toLowerCase()
-            ? 1
-            : -1;
+          return init.Title.toLowerCase() > compare.Title.toLowerCase() ?
+            1 :
+            -1;
         });
         this.movies = sorted;
       })
@@ -50,6 +47,7 @@ export default {
 };
 </script>
 
+<!-- Styling for the returned results -->
 <style scoped>
 .container {
   margin: auto;
