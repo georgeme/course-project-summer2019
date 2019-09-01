@@ -1,8 +1,8 @@
 {
-  "name": "Movies",
+  "name": "movie fun",
   "version": "1.0.0",
-  "description": "My shining Nuxt.js project",
-  "author": "Bryce Benson",
+  "description": "movie fun",
+  "author": "Meredith George",
   "private": true,
   "scripts": {
     "dev": "nuxt",

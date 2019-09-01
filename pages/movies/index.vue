@@ -27,7 +27,7 @@ export default {
       title: 'movie fun! - movies',
       meta: [
         { hid: 'description', name: 'description', content: 'Movies list for lesser known fun movies' },
-        { hid: 'keywords', name: 'keywords', content: 'movie, movies, lesser known movies, lesser-known movies, sleeper movies, musical' }
+        { hid: 'keywords', name: 'keywords', content: 'movie, movies, lesser known movies, lesser-known movies, sleeper movies' }
       ]
     }
   }

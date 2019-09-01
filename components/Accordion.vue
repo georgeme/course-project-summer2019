@@ -1,32 +1,26 @@
 <template>
-  <div role="tablist">
-    <!-- Creating the header for the accordion on the Trivia page -->
-    <div class="container d-flex align-items-center justify-content-center">
-      <div class="triviaHeader my-auto">
-        <h3 class="display-3">test your movie knowledge!</h3>
-        <p
-          class="lead"
-        >How much do you know about older or lesser known movies? Click each question below when you're ready to see the answer.</p>
-        <img
-          src="@/assets/images/fun-movie-stuff.png"
-          class="img-fluid rounded-circle"
-          alt="Image of film, 3D glasses, and movie snacks"
-        />
-      </div>
+<div role="tablist">
+  <!-- Creating the header for the accordion on the Trivia page -->
+  <div class="container d-flex align-items-center justify-content-center">
+    <div class="triviaHeader my-auto">
+      <h3 class="display-3">test your movie knowledge!</h3>
+      <p class="lead">How much do you know about older or lesser known movies? Click each question below when you're ready to see the answer.</p>
+      <img src="@/assets/images/fun-movie-stuff.png" class="img-fluid rounded-circle" alt="Image of film, 3D glasses, and movie snacks" />
     </div>
-
-    <!-- Creating the accordion iterating over the array in the script -->
-    <b-card no-body class="mb-1" v-for="item in accordionItems" :key="item.accId">
-      <b-card-header header-tag="header" class="p-1" role="tab">
-        <b-button block v-b-toggle="'accordion-' + item.accId" variant="primary">{{ item.button }}</b-button>
-      </b-card-header>
-      <b-collapse :id="'accordion-' + item.accId" accordion="my-accordion" role="tabpanel">
-        <b-card-body>
-          <b-card-text>{{ item.text }}</b-card-text>
-        </b-card-body>
-      </b-collapse>
-    </b-card>
   </div>
+
+  <!-- Creating the accordion iterating over the array in the script -->
+  <b-card no-body class="mb-1" v-for="item in accordionItems" :key="item.accId">
+    <b-card-header header-tag="header" class="p-1" role="tab">
+      <b-button block v-b-toggle="'accordion-' + item.accId" variant="primary">{{ item.button }}</b-button>
+    </b-card-header>
+    <b-collapse :id="'accordion-' + item.accId" accordion="my-accordion" role="tabpanel">
+      <b-card-body>
+        <b-card-text>{{ item.text }}</b-card-text>
+      </b-card-body>
+    </b-collapse>
+  </b-card>
+</div>
 </template>
 
 <!-- Script data for the accordion items -->
@@ -36,8 +30,7 @@ export default {
   data() {
     return {
       reactive: true,
-      accordionItems: [
-        {
+      accordionItems: [{
           accId: 1,
           button: `Who played Burt and Heather Gummer in Tremors?`,
           text: `Answer: Burt: Michael Gross, Heather: Reba McEntire`
@@ -84,6 +77,7 @@ export default {
   padding: 1rem;
   text-align: left;
 }
+
 @media screen and (max-width: 1025px) {
   h3.display-3 {
     font-size: 1.5em;

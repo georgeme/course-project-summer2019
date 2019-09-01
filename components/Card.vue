@@ -15,7 +15,7 @@
 
     <!-- Cards for each star -->
     <div class="starsCards">
-      <b-card class="mt-2" v-for="card in cards" :key="card.id" :header="card.name">
+      <b-card class="mt-2" v-for="card in cards" :card="card" :key="card.id" :header="card.name">
         <b-card-body>
           <b-card-title>Movies</b-card-title>
           <b-card-text>{{card.movies}}</b-card-text>
