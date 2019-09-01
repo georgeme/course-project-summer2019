@@ -9,7 +9,8 @@
       <div class="row">
         <div class="col-xl-3 col-lg-3 col-sm-6 col-12 p-3">
           <h5 class="display-5">Comedy</h5>
-            <b-card class="mt-2" v-for="detail in comedy" :key="detail.id" :header="detail.title">
+          <b-button @click='comedyButton = !comedyButton'>Show Comedies</b-button>
+            <b-card v-show='comedyButton' class="mt-2" v-for="detail in comedy" :key="detail.id" :header="detail.title">
               <b-list-group flush>
               <b-list-group-item><strong>Year: </strong>{{ detail.year }}</b-list-group-item>
               <b-list-group-item><strong>Genre: </strong>{{ detail.genre }}</b-list-group-item>
@@ -35,7 +36,8 @@
 
         <div class="col-xl-3 col-lg-3 col-sm-6 col-12 p-3">
           <h5 class="display-5">Romance</h5>
-          <b-card class="mt-2" v-for="detail in romance" :key="detail.id" :header="detail.title">
+          <b-button @click='romanceButton = !romanceButton'>Show Romance</b-button>
+          <b-card v-show='romanceButton' class="mt-2" v-for="detail in romance" :key="detail.id" :header="detail.title">
             <b-list-group flush>
               <b-list-group-item><strong>Year: </strong>{{ detail.year }}</b-list-group-item>
               <b-list-group-item><strong>Genre: </strong>{{ detail.genre }}</b-list-group-item>
@@ -61,7 +63,8 @@
 
         <div class="col-xl-3 col-lg-3 col-sm-6 col-12 p-3">
           <h5 class="display-5">Musical</h5>
-          <b-card class="mt-2" v-for="detail in musical" :key="detail.id" :header="detail.title">
+          <b-button @click='musicalButton = !musicalButton'>Show Musical</b-button>
+          <b-card v-show='musicalButton' class="mt-2" v-for="detail in musical" :key="detail.id" :header="detail.title">
             <b-list-group flush>
               <b-list-group-item><strong>Year: </strong>{{ detail.year }}</b-list-group-item>
               <b-list-group-item><strong>Genre: </strong>{{ detail.genre }}</b-list-group-item>
@@ -87,7 +90,8 @@
 
         <div class="col-xl-3 col-lg-3 col-sm-6 col-12 p-3">
           <h5 class="display-5">Drama or Thriller</h5>
-          <b-card class="mt-2" v-for="detail in dramaThriller" :key="detail.id" :header="detail.title">
+          <b-button @click='dramaButton = !dramaButton'>Show Drama/Thriller</b-button>
+          <b-card v-show='dramaButton' class="mt-2" v-for="detail in dramaThriller" :key="detail.id" :header="detail.title">
             <b-list-group flush>
               <b-list-group-item><strong>Year: </strong>{{ detail.year }}</b-list-group-item>
               <b-list-group-item><strong>Genre: </strong>{{ detail.genre }}</b-list-group-item>
@@ -121,6 +125,7 @@ export default {
   name: "ImagesMovies",
   data() {
     return {
+      comedyButton: false,
       comedy: [
         {
           title: "The Bachelor and the Bobby-Soxer",
@@ -193,6 +198,7 @@ export default {
           id: 6
         },
       ],
+      romanceButton: false,
       romance: [
         {
           title: "The Bishop's Wife",
@@ -215,6 +221,7 @@ export default {
           id: 8
         },
       ],
+      musicalButton: false,
       musical: [
         {
           title: "Strictly Ballroom",
@@ -227,6 +234,7 @@ export default {
           id: 9
         },
       ],
+      dramaButton: false,
       dramaThriller: [
         {
           title: "His Girl Friday",
@@ -288,6 +296,14 @@ export default {
   .card-header {
     font-size: 1.25rem;
   }
+}
+
+.btn-secondary {
+  background-color: #000080;
+  color: #ffffff;
+  padding: 1rem;
+  font-size: 1.5rem;
+  border-radius: 50%;
 }
 
 .movieList {

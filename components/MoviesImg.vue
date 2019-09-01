@@ -42,37 +42,37 @@ export default {
       posts: [
         {
           id: 1,
-          image: require("~/assets/images/007.jpg"),
+          image: require("@/assets/images/007.jpg"),
           alt: "Image of Daniel Craig as James Bond",
           imgTitle: "Daniel Craig as James Bond"
         },
         {
           id: 2,
-          image: require("~/assets/images/ironman.png"),
+          image: require("@/assets/images/ironman.png"),
           alt: "Robert Downey Jr. as Iron Man",
           imgTitle: "Robert Downey Jr. as Iron Man"
         },
         {
           id: 3,
-          image: require("~/assets/images/thor.jpg"),
+          image: require("@/assets/images/thor.jpg"),
           alt: "Image of Chris Hemsworth as Thor",
           imgTitle: "Chris Hemsworth as Thor"
         },
         {
           id: 4,
-          image: require("~/assets/images/hanks.jpg"),
+          image: require("@/assets/images/hanks.jpg"),
           alt: "Image of Tom Hanks",
           imgTitle: "Tom Hanks"
         },
         {
           id: 5,
-          image: require("~/assets/images/bogart-bacall.jpg"),
+          image: require("@/assets/images/bogart-bacall.jpg"),
           alt: "Image of Humphrey Bogart and Lauren Bacall",
           imgTitle: "Humphrey Bogart and Lauren Bacall"
         },
         {
           id: 6,
-          image: require("~/assets/images/j-law.jpg"),
+          image: require("@/assets/images/j-law.jpg"),
           alt: "Image of Jennifer Lawrence",
           imgTitle: "Jennifer Lawrence"
         }
