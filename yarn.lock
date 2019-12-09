@@ -751,8 +751,8 @@
     lodash "^4.17.15"
     pify "^4.0.1"
     semver "^6.3.0"
-    serialize-javascript "^1.7.0"
-    upath "^1.1.2"
+serialize-javascript@^2.1.1:
+  version "2.1.1"
 
 "@nuxt/cli@2.9.1":
   version "2.9.1"
@@ -880,7 +880,8 @@
     hash-sum "^2.0.0"
     proper-lockfile "^4.1.1"
     semver "^6.3.0"
-    serialize-javascript "^1.7.0"
+serialize-javascript@^2.1.1:
+  version "2.1.1"
     signal-exit "^3.0.2"
     ua-parser-js "^0.7.20"
 
@@ -2762,7 +2763,7 @@ dom-converter@^0.2:
   dependencies:
     utila "~0.4"
 
-dom-serializer@0:
+dom-r@0:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/dom-serializer/-/dom-serializer-0.2.1.tgz#13650c850daffea35d8b626a4cfc4d3a17643fdb"
   integrity sha512-sK3ujri04WyjwQXVoK4PU3y8ula1stq10GJZpqHIUgoGZdsGzAGu65BnU3d08aTVSvO7mGPZUc0wTEDL+qGE0Q==
@@ -2797,7 +2798,7 @@ domutils@1.5.1:
   resolved "https://registry.yarnpkg.com/domutils/-/domutils-1.5.1.tgz#dcd8488a26f563d61079e48c9f7b7e32373682cf"
   integrity sha1-3NhIiib1Y9YQeeSMn3t+Mjc2gs8=
   dependencies:
-    dom-serializer "0"
+    dom-r "0"
     domelementtype "1"
 
 domutils@^1.5.1, domutils@^1.7.0:
